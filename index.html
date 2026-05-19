@@ -17,6 +17,7 @@
 
 <body>
     <header>
+        <!-- Alteração: mantido apenas a área de contato no header; logo e menu foram removidos daqui -->
         <div class="contact">
             <div class="contact-item">
                 <img src="./IMAGES/pag_inicial/email.png" alt="email" />
@@ -27,32 +28,36 @@
                 <span>(41) 99610-8009</span>
             </div>
         </div>
-        <img class="logo-page" src="./IMAGES/pag_inicial/Logo_Ergoval_Ret.png" alt="logo_ergoval" />
-        <nav>
-        <ul>
-            <a>INÍCIO</a>
-            <a>A EMPRESA</a>
-            <a>SERVIÇOS</a>
-            <a>CLIENTES</a>
-            <a>CONTATO</a>
-            <A>BLOG</A>
-        </ul>
-    </nav>
     </header>
+
+    <!-- Alteração: bloco com logo e menu posicionado abaixo do header -->
+    <div class="brand-row">
+        <img class="logo-page" src="./IMAGES/pag_inicial/Logo_Ergoval_Ret.png" alt="logo_ergoval" />
+        <nav class="brand-nav">
+            <ul>
+                <li><a href="#">INÍCIO</a></li>
+                <li><a href="#">A EMPRESA</a></li>
+                <li><a href="#">SERVIÇOS</a></li>
+                <li><a href="#">CLIENTES</a></li>
+                <li><a href="#">CONTATO</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+        </nav>
+    </div>
 
     
 
     <div class="capa">
-        <img src="./IMAGES/pag_inicial/Capa.png" alt="capa" />
+        <div class="hero-text">
+            <ul>
+                <li>Análise Ergonômica do Trabalho</li>
+                <li>Avaliação Ergonômica Preliminar</li>
+                <li>Laudos Ergonômicos</li>
+                <li>Consultoria</li>
+                <li>Assessoria</li>
+            </ul>
+        </div>
     </div>
-
-    <section>
-        <h1>Análise Ergonômica do Trabalho
-            Avaliação Ergonômica Preliminar
-            Laudos Ergonômicos
-            Consultoria
-            Assessoria</h1>
-    </section>
 
     
     <h2>Atendemos todo o estado do Paraná.</h2>

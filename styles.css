@@ -19,23 +19,51 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    position: absolute;
     overflow: hidden;
+    margin-top: -40px; /* imagem sobe por baixo do brand-row */
 }
 
 .capa::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(100, 89, 67, 0.5);
+    background-color: rgba(39, 33, 10, 0.5); /* camada amarelada com 50% de transparência */
     pointer-events: none;
+}
+
+.capa .hero-text {
+        position: absolute;
+    inset: 0;
+    display: flex;
+    padding: 0 240px;
+    margin: 130px 240px;
+    align-items: left;
+    justify-content: left;
+    padding: 0 24px;
+    text-align: left;
+    z-index: 2;
+    color: #ffffff;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 30px;
+}
+
+.capa .hero-text h1 {
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.1;
+    max-width: 900px;
+    background: transparent;
+    margin: 0;
 }
 
 /* Header com faixa escura translúcida (não opaca) */
 header {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
     align-items: center;
     padding: 14px 20px;
 
@@ -67,7 +95,7 @@ header .contact-item {
 header .contact-item img {
     width: 22px;
     height: 22px;
-    object-fit: contain;
+    justify-content: flex-end; /* contatos alinhados à direita */
 }
 
 header .contact-item span {
@@ -92,9 +120,64 @@ header span {
 
 /* Logo Ergoval no topo da página */
 .logo-page {
-    width: 200px;
+    width: 160px;
     height: auto;
-    margin: 140px 0 0 200px /* encostada logo abaixo do header */
+    margin: 0 110px;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    z-index: 2;
+    align-items: flex-start;
+}
+
+/* Alteração: bloco com logo e menu posicionado abaixo do header */
+.brand-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;  
+    max-width: 1200px;
+    margin: 60px auto 0; /* afasta do header absoluto */
+    position: relative;
+    z-index: 2; /* mantém o brand-row acima da imagem de fundo */
+    padding: 0 20px;
+}
+
+.brand-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Alteração: estilo dos links do menu (abaixo do header) */
+.brand-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Agrupa contatos e nav à direita do header */
+.header-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+nav ul a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 button {
@@ -115,13 +198,14 @@ button {
 
 h1 {
     font-family: "montserrat", sans-serif; 
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
+    font-size: 20px;
     color: #ffffff;
-    text-align: center;
-    font-size: 40px;
+    text-align:left;
     margin: 0;
     padding: 0;
+    display: flex;
 
 }
 

@@ -36,11 +36,11 @@ body {
         position: absolute;
     inset: 0;
     display: flex;
-    padding: 0 240px;
-    margin: 130px 240px;
+    /* padding: 0 240px; */
+    margin: 240px 0 0 455px;
     align-items: left;
     justify-content: left;
-    padding: 0 24px;
+    /* padding: 0 24px; */
     text-align: left;
     z-index: 2;
     color: #ffffff;
@@ -48,24 +48,15 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     font-size: 30px;
+    font-family: "Montserrat", sans-serif;
 }
 
-.capa .hero-text h1 {
-    color: #ffffff;
-    font-size: clamp(2rem, 4vw, 4rem);
-    line-height: 1.1;
-    max-width: 900px;
-    background: transparent;
-    margin: 0;
-}
-
-/* Header com faixa escura translúcida (não opaca) */
 header {
     width: 100%;
     display: flex;
     justify-content: end;
     align-items: center;
-    padding: 14px 20px;
+    padding: 14px 450px;
 
     position: absolute;
     top: 0;
@@ -79,10 +70,9 @@ header {
     height: 60px;
 }
 
-/* Contatos (ícone na frente do texto) */
 header .contact {
     display: flex;
-    gap: 18px;
+    gap: 18px; /* Contatos (ícone na frente do texto) */
 }
 
 header .contact-item {
@@ -102,6 +92,7 @@ header .contact-item span {
     color: tomato;
     font-size: 14px;
     white-space: nowrap;
+    
 } 
 
 /* Estilo geral pra spans dentro do header (fallback) */
@@ -122,11 +113,11 @@ header span {
 .logo-page {
     width: 160px;
     height: auto;
-    margin: 0 110px;
+    margin: 60px 0 0 450px;
     position: absolute;
     inset: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: row;
     z-index: 2;
     align-items: flex-start;
@@ -138,7 +129,7 @@ header span {
     align-items: flex-end;
     justify-content: space-between;
     gap: 20px;  
-    max-width: 1200px;
+    max-width: 1490px;
     margin: 60px auto 0; /* afasta do header absoluto */
     position: relative;
     z-index: 2; /* mantém o brand-row acima da imagem de fundo */
@@ -158,6 +149,7 @@ header span {
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
+    /* mantém os links acima da imagem de fundo */
 }
 
 /* Agrupa contatos e nav à direita do header */
@@ -203,8 +195,7 @@ h1 {
     font-size: 20px;
     color: #ffffff;
     text-align:left;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 0 450px;
     display: flex;
 
 }
@@ -217,9 +208,35 @@ h2 {
     padding: 0;
 }
 
+/* Navegação do topo (logo -> nav) */
+.brand-nav{
+    position:absolute;
+    z-index: 5; /* acima da capa (que é apenas background) */
+    top: 100px; /* base alinhada ao logo */
+    right: 450px; /* lado direito */
+}
+
+.brand-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.brand-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 nav {
     display: inline-block;
+    z-index: 5;
 }
+
+
+
 
 
 
